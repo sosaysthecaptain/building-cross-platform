@@ -10,3 +10,5 @@
  * You will need to export all four functions that you imported as your default
  * export.
  */
+
+import {spam, foo, bar, baz} from "module-export";

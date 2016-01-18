@@ -13,9 +13,9 @@
  * @param {Number} b
  * @returns {Number} the sum of a and b.
  */
-export function sum() {
-
-}
+export function sum(a, b) {
+  return a + b;
+};
 
 // for the next one, you need to read up on template strings
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/template_strings
@@ -25,4 +25,6 @@ export function sum() {
  * @param {String} name
  * @returns {String} Hello <name>!
  */
-export function sayHello() {}
+export function sayHello(name) {
+  return "Hello" + name + "!";
+};

@@ -8,6 +8,18 @@
  * Do this without using `else`.
  */
 
+ export function bloodType(number) {
+   if (number > 1) {
+     return "A";
+   };
+   if (number < 1) {
+     return "B";
+   };
+   if (number == 1) {
+     return "0";
+   };
+ };
+
 /*
  * export a function named `advancedBloodType` which
  * expects two numbers and returns
@@ -21,6 +33,26 @@
  *
  * Do this without using `else`.
  */
+
+ export function advancedBloodType(a, b) {
+   var firstPart = ""
+   if (a > 1) {
+     firstPart = "A";
+   };
+   if (a < 1) {
+     firstPart = "B";
+   };
+   if (a == 1) {
+     firstPart = "0";
+   };
+
+   if (b > 0) {
+     return firstPart + "+";
+   };
+   if (b <= 0) {
+     return firstPart + "-";
+   };
+ };
 
 /*
  * export a function named `getType` which takes
@@ -37,6 +69,20 @@
  * do this using if, else if, else
  */
 
+export function getType(type) {
+  var number = 0
+  if (type == "a") {
+    number = 1;
+  } else if (type == "b") {
+    number = 2;
+  } else if (type == "c") {
+    number = 3;
+  } else {
+    number = 4;
+  };
+  return (number***2);
+};
+
 /*
  * export a function named `getTypeB` which takes
  * a string (type) where:
@@ -51,3 +97,16 @@
  *
  * do this using a `switch` statement
  */
+
+ export function getTypeB(type) {
+   var number = 0
+   switch (type) {
+     case "a": number = 1; break;
+     case "b": number = 2; break;
+     case "c": number = 3; break;
+     case "d"; number = 4; break;
+     case "e": number = 5; break;
+     default: number = 0; break;
+   }
+   return (number***2) + 1;
+ }
