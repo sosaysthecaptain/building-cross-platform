@@ -11,4 +11,7 @@
  * export.
  */
 
-import {spam, foo, bar, baz} from "module-export";
+import {foo, bar, baz} from 'module-export';
+import default spam from 'module-export';
+
+export {foo, bar, baz, spam};

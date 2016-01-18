@@ -8,17 +8,17 @@
  * Do this without using `else`.
  */
 
- export function bloodType(number) {
+export function bloodType(number) {
    if (number > 1) {
-     return "A";
-   };
+     return 'A';
+   }
    if (number < 1) {
-     return "B";
-   };
-   if (number == 1) {
-     return "0";
-   };
- };
+     return 'B';
+   }
+   if (number === 1) {
+     return '0';
+   }
+ }
 
 /*
  * export a function named `advancedBloodType` which
@@ -34,25 +34,26 @@
  * Do this without using `else`.
  */
 
- export function advancedBloodType(a, b) {
-   var firstPart = ""
+export function advancedBloodType(a, b) {
+   let firstPart = '';
    if (a > 1) {
-     firstPart = "A";
-   };
+     firstPart = 'A';
+   }
    if (a < 1) {
-     firstPart = "B";
-   };
-   if (a == 1) {
-     firstPart = "0";
-   };
+     firstPart = 'B';
+   }
+   if (a === 1) {
+     firstPart = '0';
+   }
 
    if (b > 0) {
-     return firstPart + "+";
-   };
+     return '${firstPart}+';
+   }
+
    if (b <= 0) {
-     return firstPart + "-";
-   };
- };
+     return '${firstPart}-';
+   }
+ }
 
 /*
  * export a function named `getType` which takes
@@ -70,18 +71,18 @@
  */
 
 export function getType(type) {
-  var number = 0
-  if (type == "a") {
+  let number = 0;
+  if (type === 'a') {
     number = 1;
-  } else if (type == "b") {
+  } else if (type === 'a') {
     number = 2;
-  } else if (type == "c") {
+  } else if (type === 'b') {
     number = 3;
   } else {
     number = 4;
-  };
-  return (number***2);
-};
+  }
+  return (number * number);
+}
 
 /*
  * export a function named `getTypeB` which takes
@@ -98,15 +99,15 @@ export function getType(type) {
  * do this using a `switch` statement
  */
 
- export function getTypeB(type) {
-   var number = 0
+export function getTypeB(type) {
+   let number = 0;
    switch (type) {
-     case "a": number = 1; break;
-     case "b": number = 2; break;
-     case "c": number = 3; break;
-     case "d"; number = 4; break;
-     case "e": number = 5; break;
+     case 'a': number = 1; break;
+     case 'b': number = 2; break;
+     case 'c': number = 3; break;
+     case 'd': number = 4; break;
+     case 'e': number = 5; break;
      default: number = 0; break;
    }
-   return (number***2) + 1;
+   return (number * number) + 1;
  }
