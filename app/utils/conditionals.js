@@ -14,6 +14,8 @@
  export function both(a, b) {
    if (a && b) {
      return true;
+   } else {
+     return false;
    }
  }
 
@@ -24,6 +26,8 @@
  export function either(a, b) {
    if (a || b) {
      return true;
+   } else {
+     return false;
    }
  }
 
@@ -32,10 +36,10 @@
  */
 
  export function negative(a) {
-   if (!a) {
+   if (a === false) {
      return true;
    }
-  //  return !a;
+   return false;
  }
  // no "if" needed here
 
@@ -44,7 +48,10 @@
  */
 
  export function positive(a) {
-   return a;
+   if (a === true) {
+     return true;
+   }
+   return false;
  }
 
 /*
@@ -60,7 +67,10 @@
  */
 
 export function none(a, b, c) {
-  return !(a && b && c);
+  if (!a && !b && !c) {
+    return true;
+  }
+  return false;
 }
 
 /*
@@ -83,6 +93,9 @@ export function none(a, b, c) {
  * export a function named `isTruthy` that returns whether a variable is `truthy`
  */
 
- export function isTrue(a) {
-   return (a == true);
+ export function isTruthy(a) {
+   if (a) {
+     return true;
+   }
+   return false;
  }

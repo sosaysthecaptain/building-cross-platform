@@ -26,5 +26,5 @@ export function sum(a, b) {
  * @returns {String} Hello <name>!
  */
 export function sayHello(name) {
-  return "Hello" + name + "!";
+  return "Hello " + name + "!";
 };
