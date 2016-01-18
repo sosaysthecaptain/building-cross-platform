@@ -5,3 +5,7 @@
  *
  * Use a ternary operator to do this.
  */
+
+export default function(a, b) {
+  return (a > b) ? a : b;
+}
