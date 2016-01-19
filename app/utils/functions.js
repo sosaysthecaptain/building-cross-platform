@@ -27,4 +27,6 @@ export function sum(a, b) {
  */
 export function sayHello(name) {
   return "Hello " + name + "!";
+  // alternately, string interpolation:
+  //return 'Hello ${name}';
 };

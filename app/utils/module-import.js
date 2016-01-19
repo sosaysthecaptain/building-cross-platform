@@ -12,6 +12,9 @@
  */
 
 import {foo, bar, baz} from './module-export';
-import spam from './module-export';
+import spam from './module-export';   // as the default, could call spam anything
 
 export {foo, bar, baz, spam};
+
+// for spam, could just do
+// export { default } from './module-export';

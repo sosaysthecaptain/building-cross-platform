@@ -10,8 +10,12 @@
 // export `aString`, set it to a string value.
 const aString = 'foo';
 
+export var aString = "string"
+
 // export `aNull`, set it to a null value.
 const aNull = null;
+
+
 
 // export `anUndefined`, set it to an undefined value.
 const anUndefined = undefined; // jshint ignore:line

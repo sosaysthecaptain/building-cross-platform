@@ -18,6 +18,8 @@
      return false;
    }
  }
+ // return a && b;
+ // would be adequate
 
 /*
  * export a function named `either` which tests whether either of two variables is truthy.
@@ -31,6 +33,8 @@
    }
  }
 
+ // return a || b; // works too
+
 /*
  * export a function named `negative` which tests whether a variable is `false`.
  */
@@ -42,6 +46,8 @@
    return false;
  }
  // no "if" needed here
+ // simpler version:
+ // return a === false;
 
 /*
  * export a function named `positive` which tests whether a variable is `true`.
@@ -54,12 +60,14 @@
    return false;
  }
 
+ // return a === true;
+
 /*
  * export a function named `all` which tests whether all of three variables are truthy.
  */
 
  export function all(a, b, c) {
-   return (a && b && c);
+   return a && b && c;
  }
 
 /*
@@ -67,18 +75,16 @@
  */
 
 export function none(a, b, c) {
-  if (!a && !b && !c) {
-    return true;
-  }
-  return false;
+  return !a && !b && !c;
 }
+// if you did ! outside the parens, you exit the loop as soon as one is true
 
 /*
  * export a function named `any` which tests whether any of three variables is truthy
  */
 
  export function any(a, b, c) {
-   return (a || b || c);
+   return a || b || c;
  }
 
 /*
@@ -86,7 +92,7 @@ export function none(a, b, c) {
  */
 
  export function isTrue(a) {
-   return (a === true);
+   return a === true;
  }
 
 /*
@@ -94,8 +100,5 @@ export function none(a, b, c) {
  */
 
  export function isTruthy(a) {
-   if (a) {
-     return true;
-   }
-   return false;
+   return !!a;
  }
