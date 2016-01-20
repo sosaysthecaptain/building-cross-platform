@@ -50,3 +50,10 @@
  * discuss further in class.
  *
  */
+
+ export default function(box) {
+   var [top, left, right, bottom] = box;
+   var x = left - right;
+   var y = top - bottom;
+   return Math.sqrt(x * x + y * y);
+ }

@@ -25,3 +25,17 @@
 // it should return `true`.  Finally, it should set the property `finished`
 // to `true` on the second argument.
 
+export function willError(func) {
+  return error
+}
+
+export default function(func) {
+  try {
+    func();
+  } catch(e) {
+    return false;
+  } finally {
+    finished = true;
+    return true;
+  }
+}

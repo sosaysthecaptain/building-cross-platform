@@ -69,6 +69,10 @@
 
 // export a function `is` that strictly compares `a` and `b`
 
+export function is(a, b) {
+  return a === b;
+}
+
 // export a function `equal` that compares the structures of `a` and `b`.
 // for this exercise, we're going to assume that all objects have the following
 // shape, so we only need to compare values for that shape to determine equality
@@ -86,3 +90,12 @@
 // (you would have to look those things up on MDN.)
 // for extra credit, make this work with arbitrary objects, and with arbitrary depth.
 // to do so, you would need to utilize the `typeof` function
+
+export function equal(a, b) {
+  for (var element in Object.keys(a)) {
+    if (a.element !== b.element) {
+      return false;
+    }
+  }
+  return true;
+}
