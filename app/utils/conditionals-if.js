@@ -9,6 +9,9 @@
  */
 
 export function bloodType(number) {
+  if (isNaN(number)) {
+    return error;
+  }
    if (number > 1) {
      return 'A';
    }
@@ -16,7 +19,7 @@ export function bloodType(number) {
      return 'B';
    }
    if (number === 1) {
-     return '0';
+     return 'O';
    }
  }
 
@@ -35,6 +38,9 @@ export function bloodType(number) {
  */
 
 export function advancedBloodType(a, b) {
+  if (isNaN(number)) {
+    return error;
+  }
    let firstPart = '';
    if (a > 1) {
      firstPart = 'A';
@@ -47,11 +53,11 @@ export function advancedBloodType(a, b) {
    }
 
    if (b > 0) {
-     return '${firstPart}+';
+     return `${firstPart}+`;
    }
 
    if (b <= 0) {
-     return '${firstPart}-';
+     return `${firstPart}-`;
    }
  }
 
@@ -74,9 +80,9 @@ export function getType(type) {
   let number = 0;
   if (type === 'a') {
     number = 1;
-  } else if (type === 'a') {
-    number = 2;
   } else if (type === 'b') {
+    number = 2;
+  } else if (type === 'c') {
     number = 3;
   } else {
     number = 4;

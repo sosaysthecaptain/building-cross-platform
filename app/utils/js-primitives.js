@@ -10,7 +10,7 @@
 // export `aString`, set it to a string value.
 const aString = 'foo';
 
-export var aString = "string"
+//export const aString = 'string'
 
 // export `aNull`, set it to a null value.
 const aNull = null;
